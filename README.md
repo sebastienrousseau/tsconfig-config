@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: ISC -->
 
 <p align="center">
-  <img src="https://cloudcdn.pro/tsconfig-config/v1/logos/tsconfig-config.svg" alt="tsconfig-config logo" width="128" />
+  <img src="./tsconfig-config.svg" alt="tsconfig-config logo" width="128" />
 </p>
 
 <h1 align="center">@sebastienrousseau/tsconfig-config</h1>
