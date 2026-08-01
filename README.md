@@ -22,24 +22,23 @@
 ## Contents
 
 **Getting Started**
-- [Install](#install) — npm, pnpm, yarn, bun
-- [Quick Start](#quick-start) — configuration in under a minute
+- [Installation](#installation) — Package manager commands
+- [Quick Start](#quick-start) — Configure in under a minute
 
-**Configuration Reference**
-- [Capabilities & Features](#capabilities--features) — design rationale & defaults
+**Features & Rule Showcase**
+- [Strict Type Checking & Modern Module Resolution](#strict-type-checking-modern-module-resolution) — Code comparison
 - [Module Compatibility](#module-compatibility) — Dual CJS/ESM & TypeScript declarations
-- [Integration Guide](#integration-guide) — setup in popular toolchains
 
-**Operational & Quality**
-- [Development & Verification](#development--verification) — running tests & validation
-- [Security & Attestation](#security--attestation) — supply chain security & SLSA attestation
-- [License](#license) — ISC License
+**Governance & Quality**
+- [Development & Testing](#development--testing) — Local validation
+- [Security & Compliance](#security--compliance) — SLSA attestation & vulnerability policy
+- [Author & License](#author--license) — Open source license
 
 ---
 
-## Install
+## Installation
 
-### Package Managers
+Install using your preferred package manager:
 
 ```bash
 # npm
@@ -55,13 +54,6 @@ yarn add -D @sebastienrousseau/tsconfig-config
 bun add -d @sebastienrousseau/tsconfig-config
 ```
 
-### Version Matrix
-
-| Tool | Supported Version | Package Version |
-|---|---|---|
-| Node.js | `>=18.0.0` | `1.0.0` |
-| TypeScript (tsc) | Latest Stable | `1.0.0` |
-
 ---
 
 ## Quick Start
@@ -69,31 +61,47 @@ bun add -d @sebastienrousseau/tsconfig-config
 ### In `package.json`
 
 ```json
-"extends": "@sebastienrousseau/tsconfig-config/node.json"
+{
+  "tsconfig": "@sebastienrousseau/tsconfig-config"
+}
 ```
 
-### In CommonJS Configuration (`tsconfig.json`)
+### In CommonJS Configuration
 
 ```js
-const configs = require("@sebastienrousseau/tsconfig-config");
+module.exports = require("@sebastienrousseau/tsconfig-config");
 ```
 
-### In ES Module Configuration (`config.mjs`)
+### In ES Module Configuration
 
 ```js
-import configs from "@sebastienrousseau/tsconfig-config";
+import config from "@sebastienrousseau/tsconfig-config";
+export default config;
 ```
 
 ---
 
-## Capabilities & Features
+## Strict Type Checking & Modern Module Resolution
 
-| Capability | Details |
-|---|---|
-| **2026 Ready** | Engineered to conform strictly to modern ECMAScript and TypeScript (tsc) standards. |
-| **Zero Side Effects** | Pure configuration exports with zero unnecessary runtime overhead. |
-| **Dual Export** | Native support for both CommonJS (`require`) and ES Modules (`import`). |
-| **TypeScript Support** | Includes first-class TypeScript definition files (`index.d.ts`). |
+Includes strict null checks, NodeNext module resolution, and declaration map generation.
+
+### Before (Unstandardized)
+
+```javascript
+// tsconfig.json
+{
+  "compilerOptions": {}
+}
+```
+
+### After (@sebastienrousseau/tsconfig-config Enforced)
+
+```javascript
+// tsconfig.json
+{
+  "extends": "@sebastienrousseau/tsconfig-config/node.json"
+}
+```
 
 ---
 
@@ -111,31 +119,34 @@ This package exports dual module entrypoints via `package.json` `exports`:
 }
 ```
 
+Full TypeScript definitions (`index.d.ts`) are included for rich IDE autocomplete and inline JSDoc tooltips.
+
 ---
 
-## Development & Verification
-
-### Local Testing
+## Development & Testing
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/sebastienrousseau/tsconfig-config.git
 cd tsconfig-config
 
-# Run the validation test suite
+# Run validation tests
 npm test
 ```
 
 ---
 
-## Security & Attestation
+## Security & Compliance
 
-- **SLSA Level 3**: Every package build is signed with keyless provenance via GitHub Actions.
-- **Dependency Auditing**: Automated vulnerability scans via `npm audit` and OpenSSF Scorecards.
-- **Zero Unpinned Dependencies**: Strict dependency management prevents supply chain vulnerabilities.
+- **SLSA Level 3 Provenance**: Builds are cryptographically signed with keyless provenance via GitHub Actions.
+- **Automated Security Audit**: Monitored continuously with CodeQL and Dependabot.
+- **Commit Signatures**: All commits are SSH/GPG signed.
+- See [SECURITY.md](SECURITY.md) for vulnerability reporting procedures.
 
 ---
 
-## License
+## Author & License
 
-[ISC License](LICENSE) © [Sebastien Rousseau](https://github.com/sebastienrousseau)
+Developed and maintained by **[Sebastien Rousseau](https://github.com/sebastienrousseau)**.
+
+Released under the [ISC License](LICENSE).
