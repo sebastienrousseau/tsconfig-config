@@ -39,7 +39,8 @@
     "base.json",
     "node.json",
     "web.json",
-    "tsconfig-config.svg"
+    "tsconfig-config.svg",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public"
