@@ -40,7 +40,8 @@
     "node.json",
     "web.json",
     "tsconfig-config.svg",
-    "LICENSE"
+    "LICENSE",
+    ".editorconfig"
   ],
   "publishConfig": {
     "access": "public"
