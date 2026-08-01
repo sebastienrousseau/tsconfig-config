@@ -38,7 +38,8 @@
     "index.d.ts",
     "base.json",
     "node.json",
-    "web.json"
+    "web.json",
+    "tsconfig-config.svg"
   ],
   "publishConfig": {
     "access": "public"
