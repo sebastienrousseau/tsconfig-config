@@ -1,6 +1,6 @@
 {
   "name": "@sebastienrousseau/tsconfig-config",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Shared TypeScript compiler configuration rules adhering to modern 2026 standards",
   "author": "Sebastien Rousseau <sebastienrousseau@users.noreply.github.com>",
   "license": "ISC",
