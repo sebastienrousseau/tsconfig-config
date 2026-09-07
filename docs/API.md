@@ -1,16 +1,43 @@
-# `@sebastienrousseau/tsconfig-config` API Reference
+# `@sebastienrousseau/tsconfig-config` API Specification
 
-Detailed specifications for configuration options, schemas, and exports.
+Comprehensive schema, property definitions, and exported options reference for `@sebastienrousseau/tsconfig-config`.
 
-## Exports
+---
 
-- `.` (Default): Primary configuration definition.
-- `index.cjs`: CommonJS entrypoint.
-- `index.mjs`: ES Module entrypoint.
-- `index.d.ts`: TypeScript type definitions.
+## Description
+Shareable TypeScript configuration presets for base, Node.js, and web application targets.
 
-## Compatibility
+---
 
-- Node.js >= 18.0.0
-- ESM and CommonJS runtimes
-- TypeScript >= 5.0
+## Programmatic Entrypoints
+
+| Specifier | Module Type | Target Runtime | Path |
+| :--- | :--- | :--- | :--- |
+| `.` (default) | Dual (CJS/ESM) | Node.js >= 18 | `index.cjs` / `index.mjs` |
+| `@sebastienrousseau/tsconfig-config` | Dual (CJS/ESM) | Node.js >= 18 | `index.cjs` / `index.mjs` |
+| `index.d.ts` | TypeScript | TypeScript >= 5.0 | Type declarations |
+
+---
+
+## Feature & Property Reference
+
+### 1. Base Compiler Preset
+- **Description**: Strict type-checking foundation (`base`)
+- **Scope**: Production & Development
+- **Status**: Stable & Active
+
+### 2. Node.js Target Preset
+- **Description**: Optimized for modern Node.js runtimes with NodeNext resolution (`node`)
+- **Scope**: Production & Development
+- **Status**: Stable & Active
+
+### 3. Web Browser Preset
+- **Description**: Optimized for client-side bundlers with DOM library inclusion (`web`)
+- **Scope**: Production & Development
+- **Status**: Stable & Active
+
+### 4. Strict Mode Defaults
+- **Description**: Enforces strict null checks, no implicit any, and exhaustive switch checks
+- **Scope**: Production & Development
+- **Status**: Stable & Active
+
