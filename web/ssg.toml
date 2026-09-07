@@ -1,0 +1,16 @@
+site_name = "tsconfig-config"
+site_title = "@sebastienrousseau/tsconfig-config — Shared TypeScript compiler configuration rules adhering to modern 2026 standards"
+site_description = "Shared TypeScript compiler configuration rules adhering to modern 2026 standards"
+base_url = "https://config.sebastienrousseau.com/tsconfig-config"
+language = "en-GB"
+
+content_dir = "web/content"
+template_dir = "web/_layouts"
+output_dir = "public"
+
+[agents]
+agents_txt = true
+ai_plugin = true
+
+[agents.mcp]
+enabled = true
