@@ -1,6 +1,9 @@
-import base from "./base.json" assert { type: "json" };
-import node from "./node.json" assert { type: "json" };
-import web from "./web.json" assert { type: "json" };
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+const base = require("./base.json");
+const node = require("./node.json");
+const web = require("./web.json");
 
 export default {
   base,
