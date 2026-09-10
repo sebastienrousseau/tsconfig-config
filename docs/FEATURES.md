@@ -21,14 +21,18 @@ An exhaustive overview covering **100% of the features, rules, and capabilities*
 ## Feature Deep Dive
 
 ### 1. Base Compiler Preset
+
 Strict type-checking foundation (`base`). Designed to guarantee deterministic behavior across all development and continuous integration environments.
 
 ### 2. Node.js Target Preset
+
 Optimized for modern Node.js runtimes with NodeNext resolution (`node`). Designed to guarantee deterministic behavior across all development and continuous integration environments.
 
 ### 3. Web Browser Preset
+
 Optimized for client-side bundlers with DOM library inclusion (`web`). Designed to guarantee deterministic behavior across all development and continuous integration environments.
 
 ### 4. Strict Mode Defaults
+
 Enforces strict null checks, no implicit any, and exhaustive switch checks. Designed to guarantee deterministic behavior across all development and continuous integration environments.
 
