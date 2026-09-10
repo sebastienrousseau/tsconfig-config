@@ -1,14 +1,9 @@
-export interface TSConfig {
-  compilerOptions?: Record<string, unknown>;
-  extends?: string;
-  include?: string[];
-  exclude?: string[];
+// SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+// SPDX-License-Identifier: Apache-2.0 OR MIT
+
+export interface TsconfigConfig {
+  [key: string]: unknown;
 }
 
-declare const configs: {
-  base: TSConfig;
-  node: TSConfig;
-  web: TSConfig;
-};
-
-export default configs;
+declare const config: TsconfigConfig;
+export default config;

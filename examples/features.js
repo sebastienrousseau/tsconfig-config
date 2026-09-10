@@ -1,10 +1,15 @@
+// SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+// SPDX-License-Identifier: Apache-2.0 OR MIT
+
 /**
  * 100% Feature Showcase for @sebastienrousseau/tsconfig-config
  */
 const config = require("../index.cjs");
 const assert = require("assert");
 
-console.log("=== 100% Feature Showcase: @sebastienrousseau/tsconfig-config ===");
+console.log(
+  "=== 100% Feature Showcase: @sebastienrousseau/tsconfig-config ===",
+);
 assert(config.base && config.base.compilerOptions);
 assert(config.node && config.node.compilerOptions);
 assert(config.web && config.web.compilerOptions);
