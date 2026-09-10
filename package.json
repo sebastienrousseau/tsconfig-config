@@ -58,7 +58,7 @@
     "typescript": ">=5.0.0"
   },
   "devDependencies": {
-    "@sebastienrousseau/config-kit": "^0.0.7",
+    "@sebastienrousseau/config-kit": "^0.0.8",
     "typescript": "^7.0.2"
   },
   "engines": {
